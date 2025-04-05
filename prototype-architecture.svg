@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- 背景 -->
+  <rect width="800" height="500" fill="#f8f9fa" />
+  
+  <!-- タイトル -->
+  <text x="400" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">SES案件・フリーランスマッチングシステム アーキテクチャ</text>
+  
+  <!-- Google Drive セクション -->
+  <rect x="50" y="70" width="200" height="140" rx="10" ry="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="2" />
+  <text x="150" y="95" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Googleドライブ</text>
+  
+  <!-- フォルダ -->
+  <rect x="70" y="110" width="70" height="80" rx="5" ry="5" fill="#fbbc04" />
+  <rect x="80" y="120" width="50" height="60" rx="2" ry="2" fill="#fff" />
+  <text x="105" y="155" font-family="Arial" font-size="10" text-anchor="middle">案件フォルダ</text>
+  
+  <rect x="160" y="110" width="70" height="80" rx="5" ry="5" fill="#fbbc04" />
+  <rect x="170" y="120" width="50" height="60" rx="2" ry="2" fill="#fff" />
+  <text x="195" y="155" font-family="Arial" font-size="10" text-anchor="middle">フリーランス&#10;フォルダ</text>
+  
+  <!-- Google Document AI -->
+  <rect x="300" y="70" width="200" height="140" rx="10" ry="10" fill="#fce8e6" stroke="#ea4335" stroke-width="2" />
+  <text x="400" y="95" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Google Document AI</text>
+  
+  <!-- Document AI の中身 -->
+  <rect x="320" y="110" width="160" height="30" rx="5" ry="5" fill="#fff" stroke="#ea4335" stroke-width="1" />
+  <text x="400" y="130" font-family="Arial" font-size="12" text-anchor="middle">スキルシート特化プロセッサ</text>
+  
+  <rect x="320" y="150" width="160" height="30" rx="5" ry="5" fill="#fff" stroke="#ea4335" stroke-width="1" />
+  <text x="400" y="170" font-family="Arial" font-size="12" text-anchor="middle">案件要件特化プロセッサ</text>
+  
+  <!-- データベース -->
+  <rect x="300" y="250" width="200" height="140" rx="10" ry="10" fill="#e6f4ea" stroke="#34a853" stroke-width="2" />
+  <text x="400" y="275" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">データベース</text>
+  
+  <!-- DB内容 -->
+  <rect x="320" y="290" width="160" height="30" rx="5" ry="5" fill="#fff" stroke="#34a853" stroke-width="1" />
+  <text x="400" y="310" font-family="Arial" font-size="12" text-anchor="middle">フリーランスDB</text>
+  
+  <rect x="320" y="330" width="160" height="30" rx="5" ry="5" fill="#fff" stroke="#34a853" stroke-width="1" />
+  <text x="400" y="350" font-family="Arial" font-size="12" text-anchor="middle">案件DB</text>
+  
+  <!-- マッチングエンジン -->
+  <rect x="550" y="160" width="200" height="140" rx="10" ry="10" fill="#e6ecf7" stroke="#4285f4" stroke-width="2" />
+  <text x="650" y="185" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">マッチングエンジン</text>
+  
+  <!-- エンジン内容 -->
+  <rect x="570" y="200" width="160" height="30" rx="5" ry="5" fill="#fff" stroke="#4285f4" stroke-width="1" />
+  <text x="650" y="220" font-family="Arial" font-size="12" text-anchor="middle">スキルベースマッチング</text>
+  
+  <rect x="570" y="240" width="160" height="30" rx="5" ry="5" fill="#fff" stroke="#4285f4" stroke-width="1" />
+  <text x="650" y="260" font-family="Arial" font-size="12" text-anchor="middle">経験・業界マッチング</text>
+  
+  <!-- フロントエンド -->
+  <rect x="550" y="330" width="200" height="140" rx="10" ry="10" fill="#fff3e0" stroke="#f39c12" stroke-width="2" />
+  <text x="650" y="355" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">社内ダッシュボード</text>
+  
+  <!-- UI内容 -->
+  <rect x="570" y="370" width="160" height="30" rx="5" ry="5" fill="#fff" stroke="#f39c12" stroke-width="1" />
+  <text x="650" y="390" font-family="Arial" font-size="12" text-anchor="middle">マッチング結果表示</text>
+  
+  <rect x="570" y="410" width="160" height="30" rx="5" ry="5" fill="#fff" stroke="#f39c12" stroke-width="1" />
+  <text x="650" y="430" font-family="Arial" font-size="12" text-anchor="middle">データ登録・編集</text>
+  
+  <!-- 接続線 -->
+  <!-- Drive -> Document AI -->
+  <path d="M250 140 L300 140" fill="none" stroke="#666" stroke-width="2" />
+  <polygon points="298,135 308,140 298,145" fill="#666" />
+  
+  <!-- Document AI -> Database -->
+  <path d="M400 210 L400 250" fill="none" stroke="#666" stroke-width="2" />
+  <polygon points="395,248 400,258 405,248" fill="#666" />
+  
+  <!-- Database -> Matching Engine -->
+  <path d="M500 320 L550 230" fill="none" stroke="#666" stroke-width="2" />
+  <polygon points="544,226 554,224 548,235" fill="#666" />
+  
+  <!-- Matching Engine -> Dashboard -->
+  <path d="M650 300 L650 330" fill="none" stroke="#666" stroke-width="2" />
+  <polygon points="645,328 650,338 655,328" fill="#666" />
+  
+  <!-- Dashboard -> Database (feed back) -->
+  <path d="M550 400 C520 400, 520 320, 500 320" fill="none" stroke="#666" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="503,324 493,318 498,329" fill="#666" />
+  
+  <!-- フロー説明 -->
+  <text x="400" y="480" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">ドキュメント解析からマッチングまでの自動化フロー</text>
+</svg>

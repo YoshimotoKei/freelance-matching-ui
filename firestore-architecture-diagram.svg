@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <!-- 背景 -->
+  <rect width="900" height="700" fill="#f8f9fa" />
+  
+  <!-- タイトル -->
+  <text x="450" y="30" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle">Cloud Firestore活用 SESマッチングシステム アーキテクチャ</text>
+  
+  <!-- Google Cloud Platform 枠 -->
+  <rect x="40" y="60" width="820" height="550" rx="10" ry="10" fill="#F1F8E9" stroke="#2E7D32" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="130" y="85" font-family="Arial" font-size="16" font-weight="bold" fill="#2E7D32">Google Cloud Platform</text>
+  
+  <!-- セクション1：入力データソース -->
+  <rect x="70" y="110" width="180" height="130" rx="10" ry="10" fill="#e8f0fe" stroke="#4285f4" stroke-width="2" />
+  <text x="160" y="135" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">入力データソース</text>
+  
+  <rect x="90" y="150" width="140" height="30" rx="5" ry="5" fill="#fff" stroke="#4285f4" stroke-width="1" />
+  <text x="160" y="170" font-family="Arial" font-size="12" text-anchor="middle">Googleドライブ API</text>
+  
+  <rect x="90" y="190" width="140" height="30" rx="5" ry="5" fill="#fff" stroke="#4285f4" stroke-width="1" />
+  <text x="160" y="210" font-family="Arial" font-size="12" text-anchor="middle">Cloud Storage</text>
+  
+  <!-- セクション2：Document AI 解析 -->
+  <rect x="300" y="110" width="180" height="130" rx="10" ry="10" fill="#fce8e6" stroke="#ea4335" stroke-width="2" />
+  <text x="390" y="135" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Document AI</text>
+  
+  <rect x="320" y="150" width="140" height="30" rx="5" ry="5" fill="#fff" stroke="#ea4335" stroke-width="1" />
+  <text x="390" y="170" font-family="Arial" font-size="12" text-anchor="middle">OCR・構造認識</text>
+  
+  <rect x="320" y="190" width="140" height="30" rx="5" ry="5" fill="#fff" stroke="#ea4335" stroke-width="1" />
+  <text x="390" y="210" font-family="Arial" font-size="12" text-anchor="middle">エンティティ抽出</text>
+  
+  <!-- セクション3：Cloud Functions -->
+  <rect x="530" y="110" width="180" height="130" rx="10" ry="10" fill="#e6f4ea" stroke="#34a853" stroke-width="2" />
+  <text x="620" y="135" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Cloud Functions</text>
+  
+  <rect x="550" y="150" width="140" height="30" rx="5" ry="5" fill="#fff" stroke="#34a853" stroke-width="1" />
+  <text x="620" y="170" font-family="Arial" font-size="12" text-anchor="middle">ファイル検出・処理</text>
+  
+  <rect x="550" y="190" width="140" height="30" rx="5" ry="5" fill="#fff" stroke="#34a853" stroke-width="1" />
+  <text x="620" y="210" font-family="Arial" font-size="12" text-anchor="middle">生成AI連携処理</text>
+  
+  <!-- セクション4：Vertex AI (生成AI) -->
+  <rect x="650" y="280" width="180" height="130" rx="10" ry="10" fill="#e1f5fe" stroke="#039be5" stroke-width="2" />
+  <text x="740" y="305" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Vertex AI / 生成AI</text>
+  
+  <rect x="670" y="320" width="140" height="30" rx="5" ry="5" fill="#fff" stroke="#039be5" stroke-width="1" />
+  <text x="740" y="340" font-family="Arial" font-size="12" text-anchor="middle">構造化データ変換</text>
+  
+  <rect x="670" y="360" width="140" height="30" rx="5" ry="5" fill="#fff" stroke="#039be5" stroke-width="1" />
+  <text x="740" y="380" font-family="Arial" font-size="12" text-anchor="middle">マッチング評価処理</text>
+  
+  <!-- セクション5：Cloud Firestore -->
+  <rect x="300" y="280" width="300" height="200" rx="10" ry="10" fill="#fff0e0" stroke="#f57c00" stroke-width="2" />
+  <text x="450" y="305" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Cloud Firestore</text>
+  
+  <rect x="320" y="325" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#f57c00" stroke-width="1" />
+  <text x="380" y="345" font-family="Arial" font-size="12" text-anchor="middle">freelancers/</text>
+  <text x="380" y="360" font-family="Arial" font-size="10" text-anchor="middle">フリーランサー情報</text>
+  
+  <rect x="320" y="375" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#f57c00" stroke-width="1" />
+  <text x="380" y="395" font-family="Arial" font-size="12" text-anchor="middle">projects/</text>
+  <text x="380" y="410" font-family="Arial" font-size="10" text-anchor="middle">案件情報</text>
+  
+  <rect x="320" y="425" width="120" height="40" rx="5" ry="5" fill="#fff" stroke="#f57c00" stroke-width="1" />
+  <text x="380" y="445" font-family="Arial" font-size="12" text-anchor="middle">matches/</text>
+  <text x="380" y="460" font-family="Arial" font-size="10" text-anchor="middle">マッチング結果</text>
+  
+  <rect x="460" y="325" width="120" height="140" rx="5" ry="5" fill="#fffde7" stroke="#fbc02d" stroke-width="1" stroke-dasharray="3,3" />
+  <text x="520" y="345" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">Firestoreの特徴</text>
+  <text x="520" y="365" font-family="Arial" font-size="9" text-anchor="middle">• リアルタイム同期</text>
+  <text x="520" y="385" font-family="Arial" font-size="9" text-anchor="middle">• 自動スケーリング</text>
+  <text x="520" y="405" font-family="Arial" font-size="9" text-anchor="middle">• セキュリティルール</text>
+  <text x="520" y="425" font-family="Arial" font-size="9" text-anchor="middle">• 柔軟なクエリ</text>
+  <text x="520" y="445" font-family="Arial" font-size="9" text-anchor="middle">• オフラインサポート</text>
+  
+  <!-- セクション6：Firebase Auth -->
+  <rect x="70" y="280" width="180" height="130" rx="10" ry="10" fill="#ede7f6" stroke="#673ab7" stroke-width="2" />
+  <text x="160" y="305" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Firebase Auth</text>
+  
+  <rect x="90" y="325" width="140" height="30" rx="5" ry="5" fill="#fff" stroke="#673ab7" stroke-width="1" />
+  <text x="160" y="345" font-family="Arial" font-size="12" text-anchor="middle">ユーザー認証</text>
+  
+  <rect x="90" y="365" width="140" height="30" rx="5" ry="5" fill="#fff" stroke="#673ab7" stroke-width="1" />
+  <text x="160" y="385" font-family="Arial" font-size="12" text-anchor="middle">アクセス制御</text>
+  
+  <!-- セクション7：マッチングエンジン用Cloud Functions -->
+  <rect x="300" y="520" width="300" height="70" rx="10" ry="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" />
+  <text x="450" y="545" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">マッチングエンジン (Cloud Functions)</text>
+  
+  <rect x="320" y="555" width="120" height="25" rx="5" ry="5" fill="#fff" stroke="#9c27b0" stroke-width="1" />
+  <text x="380" y="572" font-family="Arial" font-size="11" text-anchor="middle">シンプルマッチング</text>
+  
+  <rect x="460" y="555" width="120" height="25" rx="5" ry="5" fill="#fff" stroke="#9c27b0" stroke-width="1" />
+  <text x="520" y="572" font-family="Arial" font-size="11" text-anchor="middle">AI駆動高度マッチング</text>
+  
+  <!-- セクション8：Webアプリケーション -->
+  <rect x="390" y="630" width="120" height="50" rx="10" ry="10" fill="#e0f7fa" stroke="#00acc1" stroke-width="2" />
+  <text x="450" y="655" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">React</text>
+  <text x="450" y="670" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Web UI</text>
+  
+  <!-- 接続線 -->
+  <!-- ドライブ → Cloud Storage -->
+  <path d="M160 220 L160 240 L160 240" stroke="#666" stroke-width="2" fill="none" />
+  <polygon points="155,238 160,248 165,238" fill="#666" />
+  
+  <!-- Cloud Storage → Document AI -->
+  <path d="M250 180 L300 180" stroke="#666" stroke-width="2" fill="none" />
+  <polygon points="298,175 308,180 298,185" fill="#666" />
+  
+  <!-- Document AI → Cloud Functions -->
+  <path d="M480 180 L530 180" stroke="#666" stroke-width="2" fill="none" />
+  <polygon points="528,175 538,180 528,185" fill="#666" />
+  
+  <!-- Cloud Functions → Vertex AI -->
+  <path d="M620 240 L620 280 L680 280 L740 280" stroke="#666" stroke-width="2" fill="none" />
+  <polygon points="738,275 748,280 738,285" fill="#666" />
+  
+  <!-- Vertex AI → Cloud Firestore -->
+  <path d="M650 340 L600 340" stroke="#666" stroke-width="2" fill="none" />
+  <polygon points="603,345 593,340 603,335" fill="#666" />
+  
+  <!-- Firebase Auth → Cloud Firestore -->
+  <path d="M250 340 L300 340" stroke="#666" stroke-width="2" fill="none" />
+  <polygon points="298,335 308,340 298,345" fill="#666" />
+  
+  <!-- Cloud Firestore → マッチングエンジン -->
+  <path d="M450 480 L450 520" stroke="#666" stroke-width="2" fill="none" />
+  <polygon points="445,518 450,528 455,518" fill="#666" />
+  
+  <!-- マッチングエンジン → Cloud Firestore (結果保存) -->
+  <path d="M520 520 L550 500 L570 480" stroke="#666" stroke-width="2" fill="none" stroke-dasharray="5,5" />
+  <polygon points="565,483 575,475 570,485" fill="#666" />
+  
+  <!-- マッチングエンジン → Vertex AI -->
+  <path d="M600 540 L730 540 L730 410" stroke="#666" stroke-width="2" fill="none" />
+  <polygon points="725,413 730,403 735,413" fill="#666" />
+  
+  <!-- マッチングエンジン → Web UI -->
+  <path d="M450 590 L450 630" stroke="#666" stroke-width="2" fill="none" />
+  <polygon points="445,628 450,638 455,628" fill="#666" />
+  
+  <!-- Web UI → Firebase Auth -->
+  <path d="M390 650 L50 650 L50 340 L70 340" stroke="#666" stroke-width="2" fill="none" />
+  <polygon points="68,335 78,340 68,345" fill="#666" />
+  
+  <!-- Web UI → Cloud Firestore (データ読み込み) -->
+  <path d="M510 650 L600 650 L600 380 L600 380" stroke="#666" stroke-width="2" fill="none" stroke-dasharray="5,5" />
+  <polygon points="595,383 600,373 605,383" fill="#666" />
+</svg>
