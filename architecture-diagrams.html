@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アーキテクチャ図 - SESフリーランスマッチングシステム</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .svg-container {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      padding: 20px;
+      margin-bottom: 30px;
+      overflow: auto;
+    }
+    .svg-container svg {
+      max-width: 100%;
+      height: auto;
+    }
+    .svg-container img {
+      max-width: 100%;
+      height: auto;
+    }
+    .diagram-title {
+      margin-bottom: 15px;
+      color: #4285f4;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container container">
+      <div class="logo">
+        <img src="https://via.placeholder.com/40x40" alt="ロゴ">
+        <h1>AI-SESマッチング</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">ダッシュボード</a></li>
+          <li><a href="freelancers.html">フリーランス</a></li>
+          <li><a href="projects.html">案件</a></li>
+          <li><a href="matching.html">マッチング</a></li>
+          <li><a href="architecture-diagrams.html" class="active">アーキテクチャ図</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>システムアーキテクチャ図</h2>
+      
+      <div class="svg-container">
+        <h3 class="diagram-title">プロトタイプアーキテクチャ</h3>
+        <object data="prototype-architecture.svg" type="image/svg+xml" width="800" height="500">
+          <img src="prototype-architecture.svg" alt="プロトタイプアーキテクチャ図">
+        </object>
+      </div>
+
+      <div class="svg-container">
+        <h3 class="diagram-title">Firestore活用アーキテクチャ</h3>
+        <object data="firestore-architecture-diagram.svg" type="image/svg+xml" width="900" height="700">
+          <img src="firestore-architecture-diagram.svg" alt="Firestoreアーキテクチャ図">
+        </object>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 生成AI活用SESフリーランスマッチングシステム</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
