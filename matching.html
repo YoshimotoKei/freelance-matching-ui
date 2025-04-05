@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マッチング - 生成AI活用SESフリーランスマッチングシステム</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container container">
+      <div class="logo">
+        <img src="https://via.placeholder.com/40x40" alt="ロゴ">
+        <h1>AI-SESマッチング</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">ダッシュボード</a></li>
+          <li><a href="freelancers.html">フリーランス</a></li>
+          <li><a href="projects.html">案件</a></li>
+          <li><a href="matching.html" class="active">マッチング</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>マッチング検索</h2>
+      
+      <div class="search-container">
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="自然言語で検索（例：大手金融機関システム刷新PJに最適なフリーランサーを探して）">
+          <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 20px; margin-bottom: 30px;">
+        <div style="flex: 1; background-color: white; border-radius: 8px; box-shadow: var(--shadow); padding: 20px;">
+          <h3 style="margin-bottom: 15px;">案件を選択</h3>
+          <select style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid var(--border-color); margin-bottom: 15px;">
+            <option>大手金融機関システム刷新PJ</option>
+            <option>ECサイトリニューアル</option>
+            <option>製造業IoTシステム開発</option>
+            <option>医療システム保守運用</option>
+            <option>クラウド移行プロジェクト</option>
+          </select>
+          <div style="margin-bottom: 15px;">
+            <h4 style="margin-bottom: 10px;">必須スキル</h4>
+            <div class="skills-container">
+              <span class="skill-tag main">Java<span class="skill-level">4</span></span>
+              <span class="skill-tag main">Spring Boot<span class="skill-level">4</span></span>
+              <span class="skill-tag main">REST API<span class="skill-level">4</span></span>
+            </div>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 10px;">歓迎スキル</h4>
+            <div class="skills-container">
+              <span class="skill-tag">マイクロサービス<span class="skill-level">3</span></span>
+              <span class="skill-tag">AWS<span class="skill-level">3</span></span>
+              <span class="skill-tag">金融システム経験<span class="skill-level">3</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div style="flex: 1; background-color: white; border-radius: 8px; box-shadow: var(--shadow); padding: 20px;">
+          <h3 style="margin-bottom: 15px;">マッチング条件</h3>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">スキルマッチング重み</label>
+            <input type="range" min="1" max="5" value="3" style="width: 100%;">
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">経験マッチング重み</label>
+            <input type="range" min="1" max="5" value="4" style="width: 100%;">
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">単価マッチング重み</label>
+            <input type="range" min="1" max="5" value="3" style="width: 100%;">
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 500;">AI評価重み</label>
+            <input type="range" min="1" max="5" value="4" style="width: 100%;">
+          </div>
+          <button class="btn btn-primary" style="width: 100%;">マッチング検索</button>
+        </div>
+      </div>
+
+      <h3>マッチング結果</h3>
+      <p style="margin-bottom: 20px;">「大手金融機関システム刷新PJ」に最適なフリーランサー</p>
+
+      <div class="match-card">
+        <div class="match-score">
+          <div class="score-value">92%</div>
+          <div class="score-label">マッチ度</div>
+        </div>
+        <div class="match-details">
+          <div class="match-header">
+            <div class="match-title">山田 太郎（シニアJavaエンジニア）</div>
+            <div class="match-actions">
+              <button class="btn btn-primary">提案する</button>
+              <button class="btn btn-secondary">詳細</button>
+            </div>
+          </div>
+          <div class="match-info">
+            <div class="match-info-item">
+              <div class="match-info-label">スキルマッチ</div>
+              <div class="match-info-value">95%</div>
+            </div>
+            <div class="match-info-item">
+              <div class="match-info-label">経験マッチ</div>
+              <div class="match-info-value">90%</div>
+            </div>
+            <div class="match-info-item">
+              <div class="match-info-label">単価マッチ</div>
+              <div class="match-info-value">85%</div>
+            </div>
+            <div class="match-info-item">
+              <div class="match-info-label">AI評価</div>
+              <div class="match-info-value">上位10%</div>
+            </div>
+          </div>
+          <div class="match-reason">
+            <div class="reason-title">AIマッチング根拠</div>
+            <p>山田太郎氏は金融系システム開発において12年の経験を持ち、特にJava/Spring Bootを用いた大規模システム開発に精通しています。マイクロサービスアーキテクチャの設計・実装経験もあり、本案件の要件に非常に適合しています。また、チームリーダーとしての経験も豊富で、開発リーダーのポジションにも適しています。単価も案件の予算内に収まっており、即日稼働可能という点も魅力的です。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="match-card">
+        <div class="match-score" style="background-color: #4285f4;">
+          <div class="score-value">85%</div>
+          <div class="score-label">マッチ度</div>
+        </div>
+        <div class="match-details">
+          <div class="match-header">
+            <div class="match-title">鈴木 一郎（シニアエンジニア）</div>
+            <div class="match-actions">
+              <button class="btn btn-primary">提案する</button>
+              <button class="btn btn-secondary">詳細</button>
+            </div>
+          </div>
+          <div class="match-info">
+            <div class="match-info-item">
+              <div class="match-info-label">スキルマッチ</div>
+              <div class="match-info-value">85%</div>
+            </div>
+            <div class="match-info-item">
+              <div class="match-info-label">経験マッチ</div>
+              <div class="match-info-value">80%</div>
+            </div>
+            <div class="match-info-item">
+              <div class="match-info-label">単価マッチ</div>
+              <div class="match-info-value">90%</div>
+            </div>
+            <div class="match-info-item">
+              <div class="match-info-label">AI評価</div>
+              <div class="match-info-value">上位20%</div>
+            </div>
+          </div>
+          <div class="match-reason">
+            <div class="reason-title">AIマッチング根拠</div>
+            <p>鈴木一郎氏はJavaでの開発経験が豊富で、Spring Bootも使いこなせるスキルを持っています。金融系の経験はやや少ないものの、大規模システム開発の経験があり、技術的な要件は満たしています。マイクロサービスアーキテクチャの経験もあり、本案件に適しています。ただし、チームリーダーとしての経験がやや不足している点が山田氏と比較するとマッチ度が下がる要因です。単価は案件の予算内に収まっていますが、現在稼働中のため調整が必要です。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="match-card">
+        <div class="match-score" style="background-color: #5f6368;">
+          <div class="score-value">78%</div>
+          <div class="score-label">マッチ度</div>
+        </div>
+        <div class="match-details">
+          <div class="match-header">
+            <div class="match-title">佐藤 健太（Javaエンジニア）</div>
+            <div class="match-actions">
+              <button class="btn btn-primary">提案する</button>
+              <button class="btn btn-secondary">詳細</button>
+            </div>
+          </div>
+          <div class="match-info">
+            <div class="match-info-item">
+              <div class="match-info-label">スキルマッチ</div>
+              <div class="match-info-value">80%</div>
+            </div>
+            <div class="match-info-item">
+              <div class="match-info-label">経験マッチ</div>
+              <div class="match-info-value">70%</div>
+            </div>
+            <div class="match-info-item">
+              <div class="match-info-label">単価マッチ</div>
+              <div class="match-info-value">95%</div>
+            </div>
+            <div class="match-info-item">
+              <div class="match-info-label">AI評価</div>
+              <div class="match-info-value">平均的</div>
+            </div>
+          </div>
+          <div class="match-reason">
+            <div class="reason-title">AIマッチング根拠</div>
+            <p>佐藤健太氏はJava/Spring Bootのスキルを持っていますが、大規模システム開発の経験がやや不足しています。金融系の経験はありますが、マイクロサービスアーキテクチャの経験が限定的です。技術的なスキルは案件の要件を満たしていますが、リーダーシップの経験が不足しているため、開発リーダーのポジションとしては若干のギャップがあります。単価は案件の予算内に十分収まっており、稼働可能時期も柔軟に対応可能です。成長意欲が高く、適切なサポートがあれば十分に活躍できる可能性があります。</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 30px;">推薦コメント</h3>
+      <div style="background-color: white; border-radius: 8px; box-shadow: var(--shadow); padding: 20px; margin-bottom: 20px;">
+        <p style="margin-bottom: 10px;"><strong>営業担当者向け提案文:</strong></p>
+        <div style="background-color: var(--light-color); border-radius: 4px; padding: 15px;">
+          <p>山田太郎氏は、大手金融機関システム刷新プロジェクトに最適な人材です。Java/Spring Bootでの大規模システム開発において12年の豊富な経験を持ち、マイクロサービスアーキテクチャの設計・実装にも精通しています。</p>
+          <p>特に金融系システムの開発経験が豊富で、銀行業務の知識も十分にあるため、ドメイン理解の面でも大きなアドバンテージがあります。チームリーダーとしての経験も豊富で、メンバーの技術指導や顧客との折衝能力も高く評価されています。</p>
+          <p>単価（85〜95万円）も案件の予算内に収まっており、即日稼働可能という点も魅力的です。AIによる評価でも上位10%に位置する優秀なエンジニアであり、本案件の成功に大きく貢献できる人材と言えます。</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 生成AI活用SESフリーランスマッチングシステム</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

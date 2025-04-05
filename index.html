@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生成AI活用SESフリーランスマッチングシステム</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container container">
+      <div class="logo">
+        <img src="https://via.placeholder.com/40x40" alt="ロゴ">
+        <h1>AI-SESマッチング</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">ダッシュボード</a></li>
+          <li><a href="freelancers.html">フリーランス</a></li>
+          <li><a href="projects.html">案件</a></li>
+          <li><a href="matching.html">マッチング</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>ダッシュボード</h2>
+      
+      <div class="search-container">
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="自然言語で検索（例：Javaに強いフリーランサーを探して）">
+          <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+
+      <div class="dashboard">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">フリーランス</h3>
+            <div class="card-icon">
+              <i class="fas fa-user-tie"></i>
+            </div>
+          </div>
+          <div class="card-content">
+            <p>登録フリーランス：<strong>125</strong>名</p>
+            <p>今月の新規登録：<strong>12</strong>名</p>
+            <p>稼働可能：<strong>78</strong>名</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary">詳細を見る</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">案件</h3>
+            <div class="card-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+          </div>
+          <div class="card-content">
+            <p>登録案件：<strong>45</strong>件</p>
+            <p>今月の新規案件：<strong>8</strong>件</p>
+            <p>未マッチング：<strong>23</strong>件</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary">詳細を見る</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">マッチング</h3>
+            <div class="card-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+          </div>
+          <div class="card-content">
+            <p>今月のマッチング：<strong>15</strong>件</p>
+            <p>マッチング率：<strong>67</strong>%</p>
+            <p>高評価マッチング：<strong>9</strong>件</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary">詳細を見る</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">AI解析状況</h3>
+            <div class="card-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+          </div>
+          <div class="card-content">
+            <p>処理待ちドキュメント：<strong>5</strong>件</p>
+            <p>今日の解析完了：<strong>12</strong>件</p>
+            <p>平均解析時間：<strong>45</strong>秒</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary">詳細を見る</button>
+          </div>
+        </div>
+      </div>
+
+      <h3>最近のマッチング</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>マッチングID</th>
+              <th>フリーランス</th>
+              <th>案件</th>
+              <th>マッチングスコア</th>
+              <th>AI評価</th>
+              <th>ステータス</th>
+              <th>アクション</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>M-2025-0042</td>
+              <td>山田 太郎</td>
+              <td>大手金融機関システム刷新PJ</td>
+              <td>92%</td>
+              <td>非常に高い適合性</td>
+              <td>提案中</td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>M-2025-0041</td>
+              <td>佐藤 花子</td>
+              <td>ECサイトリニューアル</td>
+              <td>87%</td>
+              <td>高い適合性</td>
+              <td>面談調整中</td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>M-2025-0040</td>
+              <td>鈴木 一郎</td>
+              <td>製造業IoTシステム開発</td>
+              <td>85%</td>
+              <td>高い適合性</td>
+              <td>成約</td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>M-2025-0039</td>
+              <td>高橋 次郎</td>
+              <td>医療システム保守運用</td>
+              <td>78%</td>
+              <td>良好な適合性</td>
+              <td>成約</td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>M-2025-0038</td>
+              <td>伊藤 三郎</td>
+              <td>クラウド移行プロジェクト</td>
+              <td>75%</td>
+              <td>良好な適合性</td>
+              <td>不成立</td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>最近追加されたドキュメント</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ドキュメントID</th>
+              <th>タイプ</th>
+              <th>名前</th>
+              <th>追加日時</th>
+              <th>解析状況</th>
+              <th>アクション</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>D-2025-0087</td>
+              <td>スキルシート</td>
+              <td>中村 健太.pdf</td>
+              <td>2025/04/05 15:30</td>
+              <td>解析完了</td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>D-2025-0086</td>
+              <td>案件要件</td>
+              <td>小売業基幹システム開発.docx</td>
+              <td>2025/04/05 14:15</td>
+              <td>解析中</td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>D-2025-0085</td>
+              <td>スキルシート</td>
+              <td>加藤 美咲.xlsx</td>
+              <td>2025/04/05 11:42</td>
+              <td>解析完了</td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>D-2025-0084</td>
+              <td>案件要件</td>
+              <td>金融機関API開発.pdf</td>
+              <td>2025/04/05 10:08</td>
+              <td>解析完了</td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>D-2025-0083</td>
+              <td>スキルシート</td>
+              <td>渡辺 隆.pdf</td>
+              <td>2025/04/04 17:23</td>
+              <td>解析完了</td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 生成AI活用SESフリーランスマッチングシステム</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

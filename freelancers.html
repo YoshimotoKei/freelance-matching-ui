@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>フリーランス一覧 - 生成AI活用SESフリーランスマッチングシステム</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container container">
+      <div class="logo">
+        <img src="https://via.placeholder.com/40x40" alt="ロゴ">
+        <h1>AI-SESマッチング</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">ダッシュボード</a></li>
+          <li><a href="freelancers.html" class="active">フリーランス</a></li>
+          <li><a href="projects.html">案件</a></li>
+          <li><a href="matching.html">マッチング</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>フリーランス一覧</h2>
+      
+      <div class="search-container">
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="フリーランスを検索（スキル、経験、単価など）">
+          <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+
+      <div class="filter-container" style="display: flex; gap: 10px; margin-bottom: 20px;">
+        <button class="btn btn-secondary">スキルでフィルタ</button>
+        <button class="btn btn-secondary">単価でフィルタ</button>
+        <button class="btn btn-secondary">稼働状況でフィルタ</button>
+        <button class="btn btn-secondary">経験年数でフィルタ</button>
+        <button class="btn btn-secondary">AI評価でフィルタ</button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>名前</th>
+              <th>メインスキル</th>
+              <th>経験年数</th>
+              <th>単価（万円）</th>
+              <th>稼働状況</th>
+              <th>AI評価</th>
+              <th>アクション</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr onclick="window.location='freelancer-detail.html';" style="cursor: pointer;">
+              <td>F-0001</td>
+              <td>山田 太郎</td>
+              <td>
+                <div class="skills-container">
+                  <span class="skill-tag main">Java<span class="skill-level">5</span></span>
+                  <span class="skill-tag main">Spring<span class="skill-level">4</span></span>
+                </div>
+              </td>
+              <td>12年</td>
+              <td>85〜95</td>
+              <td>稼働可能</td>
+              <td>
+                <div style="display: flex; align-items: center;">
+                  <span style="color: #34a853; margin-right: 5px;"><i class="fas fa-arrow-up"></i></span>
+                  <span>上位10%</span>
+                </div>
+              </td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>F-0002</td>
+              <td>佐藤 花子</td>
+              <td>
+                <div class="skills-container">
+                  <span class="skill-tag main">React<span class="skill-level">5</span></span>
+                  <span class="skill-tag main">TypeScript<span class="skill-level">4</span></span>
+                </div>
+              </td>
+              <td>8年</td>
+              <td>75〜85</td>
+              <td>7月〜</td>
+              <td>
+                <div style="display: flex; align-items: center;">
+                  <span style="color: #34a853; margin-right: 5px;"><i class="fas fa-arrow-up"></i></span>
+                  <span>上位15%</span>
+                </div>
+              </td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>F-0003</td>
+              <td>鈴木 一郎</td>
+              <td>
+                <div class="skills-container">
+                  <span class="skill-tag main">Python<span class="skill-level">5</span></span>
+                  <span class="skill-tag main">AWS<span class="skill-level">4</span></span>
+                </div>
+              </td>
+              <td>10年</td>
+              <td>80〜90</td>
+              <td>稼働中</td>
+              <td>
+                <div style="display: flex; align-items: center;">
+                  <span style="color: #34a853; margin-right: 5px;"><i class="fas fa-arrow-up"></i></span>
+                  <span>上位20%</span>
+                </div>
+              </td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>F-0004</td>
+              <td>高橋 次郎</td>
+              <td>
+                <div class="skills-container">
+                  <span class="skill-tag main">C#<span class="skill-level">4</span></span>
+                  <span class="skill-tag main">.NET<span class="skill-level">4</span></span>
+                </div>
+              </td>
+              <td>7年</td>
+              <td>70〜80</td>
+              <td>6月〜</td>
+              <td>
+                <div style="display: flex; align-items: center;">
+                  <span style="color: #4285f4; margin-right: 5px;"><i class="fas fa-equals"></i></span>
+                  <span>平均的</span>
+                </div>
+              </td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>F-0005</td>
+              <td>伊藤 三郎</td>
+              <td>
+                <div class="skills-container">
+                  <span class="skill-tag main">PHP<span class="skill-level">4</span></span>
+                  <span class="skill-tag main">Laravel<span class="skill-level">4</span></span>
+                </div>
+              </td>
+              <td>6年</td>
+              <td>65〜75</td>
+              <td>稼働可能</td>
+              <td>
+                <div style="display: flex; align-items: center;">
+                  <span style="color: #4285f4; margin-right: 5px;"><i class="fas fa-equals"></i></span>
+                  <span>平均的</span>
+                </div>
+              </td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>F-0006</td>
+              <td>渡辺 隆</td>
+              <td>
+                <div class="skills-container">
+                  <span class="skill-tag main">Go<span class="skill-level">4</span></span>
+                  <span class="skill-tag main">Kubernetes<span class="skill-level">3</span></span>
+                </div>
+              </td>
+              <td>5年</td>
+              <td>70〜80</td>
+              <td>8月〜</td>
+              <td>
+                <div style="display: flex; align-items: center;">
+                  <span style="color: #34a853; margin-right: 5px;"><i class="fas fa-arrow-up"></i></span>
+                  <span>上位30%</span>
+                </div>
+              </td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+            <tr>
+              <td>F-0007</td>
+              <td>加藤 美咲</td>
+              <td>
+                <div class="skills-container">
+                  <span class="skill-tag main">UI/UX<span class="skill-level">5</span></span>
+                  <span class="skill-tag main">Figma<span class="skill-level">5</span></span>
+                </div>
+              </td>
+              <td>9年</td>
+              <td>75〜85</td>
+              <td>稼働可能</td>
+              <td>
+                <div style="display: flex; align-items: center;">
+                  <span style="color: #34a853; margin-right: 5px;"><i class="fas fa-arrow-up"></i></span>
+                  <span>上位5%</span>
+                </div>
+              </td>
+              <td><button class="btn btn-secondary">詳細</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <button class="btn btn-secondary" style="margin-right: 10px;">前へ</button>
+        <button class="btn btn-primary" style="margin-right: 10px;">1</button>
+        <button class="btn btn-secondary" style="margin-right: 10px;">2</button>
+        <button class="btn btn-secondary" style="margin-right: 10px;">3</button>
+        <button class="btn btn-secondary">次へ</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 生成AI活用SESフリーランスマッチングシステム</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
